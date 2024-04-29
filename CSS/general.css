@@ -1,0 +1,308 @@
+/*SITIO*/
+* {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', 'sans-serif';
+    box-sizing: border-box;
+    padding: 0px;
+}
+
+/*HEADER*/
+header {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    color: black;
+    padding: 20px;
+    margin-bottom: 50px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+}
+
+.flx{
+    display:flex;
+}
+
+.logo {
+    height: 30px;
+    width: auto;
+    margin-right: 20px; 
+}
+.nav-list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center; 
+}
+
+.nav-list li{
+    padding: 10px;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: black;
+    display: block
+}
+
+.menu-icon{
+    display:none;
+    cursor:pointer;
+}
+
+.menu-icon-line{
+    width: 30px;
+    height: 3px;
+    background-color: black;
+    margin: 5px 0;
+}
+
+.menu-toggle {
+    display:none;
+}
+
+/*
+#nav {
+    display: flex;
+    height: 100px;
+    background-color: white;
+    margin-bottom: 10px;
+    align-items: center;
+}
+.nav-div{
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+
+
+.nav-links{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    padding-left: 40px;
+    gap: 50px;
+}
+
+.nav-links li:hover {
+    font-weight: bold;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    border-top: 1px solid lightgray;
+    border-bottom: 1px solid lightgray;
+
+}
+
+
+/*MAIN*/
+
+
+.ban-1 {
+    height: 400;
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 60px;
+
+}
+
+#presentacion {
+    font-size: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+    line-height: 1.8;
+}
+
+/*MAIN - SELECTORES*/
+
+.selector-container{
+    width: 100%;
+    height: auto;
+    overflow: hidden;  
+    display: flex;     
+    align-items: center; 
+    justify-content: center;
+}
+
+.selector{
+    object-fit: contain;
+    object-position:center;
+    position: relative;
+    overflow: hidden;
+    margin: 100px;
+    border: 1px solid;
+    border-color: grey;
+    border-radius: 20%;
+}
+
+.selector img{
+    height: 300px;
+    width: 300px;
+}
+
+.selector-mensaje{
+    height: 150px;
+    width: 100%;
+    position: absolute;
+    object-fit: contain ;
+    background-color: rgba(235, 163, 8, 0.5); 
+    bottom: 0px;
+    margin: 0px;
+    align-content: center;
+    text-align: center;
+    font-size: 20px;
+}
+
+/*MAIN - CASOS*/
+
+.casos-container{
+    display: flex;
+    margin-top: 60px;
+    margin-bottom: 40px;
+    height: 400px;
+    width: 100%;
+    background-color: #73b7bc;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-individual{
+    align-items: center;
+    width: 300px;
+    height: 350px;
+    align-content: center;
+    border-radius: 10%;
+}
+
+.foto-ajuste{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    border: 0.5px solid;
+    border-color: grey;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container-individual-review{
+    height: 100px;
+    width: 90%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+
+.review-text{
+    font-size: 0.5em;
+    text-align: center;
+}
+.checked {
+    color: orange;
+}
+
+.rating{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+#video {
+    max-width: 100%;
+}
+
+.video{
+    width:100%;
+    padding: 5px;
+}
+
+
+
+/*Estilo para movil*/
+@media(max-width: 768px) {
+    .nav-list {
+        display:none;
+        width: 50%;
+        flex-direction: column;
+        position: absolute;
+        top: 40px;
+        right: 8px;
+        background: white;
+        margin-bottom: 50px;
+    }
+    .menu-toggle:checked + .menu-icon + .nav-list{
+        display:flex
+    }
+    .menu-icon {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 10px;
+    }
+    /*SELECTORES*/
+    .selector-container{
+        width: 100%;
+        height: auto;
+        overflow: hidden;  
+        display: grid;
+        grid-template-rows: 300px 300px;
+        grid-gap: 2px;     
+        align-items: center; 
+        justify-content: center;
+    }
+    .selector{
+        object-fit: contain;
+        object-position:center;
+        position: relative;
+        overflow: hidden;
+        margin: 50px;
+        border: 1px solid;
+        border-color: grey;
+        border-radius: 20%;
+    }
+    .selector img{
+        height: 200px;
+        width: 200px;
+    }
+    .selector-mensaje{
+        height: 100px;
+        width: 100%;
+        position: absolute;
+        object-fit: contain ;
+        background-color: rgba(235, 163, 8, 0.5); 
+        bottom: 0px;
+        margin: 0px;
+        align-content: center;
+        text-align: center;
+        font-size: 20px;
+    }
+    /*CASOS*/
+    .casos-container{
+        display: grid;
+        grid-template-rows: 250px 250px 250px;
+        grid-gap: 2px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        width: 100%;
+        height: auto;
+        padding-top: 40px;
+        background-color: #73b7bc;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .foto-ajuste{
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+        border: 0.5px solid;
+        border-color: grey;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
