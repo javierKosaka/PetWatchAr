@@ -5,6 +5,17 @@
     padding: 0px;
 }
 
+/*PALETA DE COLORES*/
+:root{
+    --main-verde: RGB(124, 252, 0);
+    --main-amarillo: RGB(255, 223, 0);
+    --main-azul: RGB(135, 206, 235);
+    --main-naranja: RGB(255, 165, 0);
+    --main-naranja-t: RGBA(255, 165, 0, 0.5);
+    --main-marron: RGB(210, 180, 140);
+}
+
+
 /*HEADER*/
 header {
     display: flex;
@@ -156,14 +167,18 @@ header {
 }
 
 /*MAIN - CASOS*/
+.casos{
+    margin-top: 60px;
+    margin-bottom: 60px;
+    padding: 10px;
+    background-color: var(--main-azul);
+    height: 450px;
+    text-align: center;
+}
 
 .casos-container{
     display: flex;
-    margin-top: 60px;
-    margin-bottom: 40px;
-    height: 400px;
     width: 100%;
-    background-color: #73b7bc;
     justify-content: center;
     align-items: center;
 }
@@ -220,6 +235,25 @@ header {
     padding: 5px;
 }
 
+footer{
+    display: grid;
+    height: 10em;
+    width: 100%;
+    background-color: var(--main-naranja-t);
+    align-content: center;
+    justify-content: right;
+}
+
+footer div{
+    width: 200px;
+    height: auto;
+}
+
+.redes{
+    height: 30px;
+    width: 30px;
+    margin: 5px;
+}
 
 
 /*Estilo para movil*/
@@ -281,16 +315,25 @@ header {
         font-size: 20px;
     }
     /*CASOS*/
+
+    .casos{
+        margin-top: 60px;
+        margin-bottom: 60px;
+        padding: 10px;
+        background-color: var(--main-azul);
+        height: auto;
+        text-align: center;
+    }
     .casos-container{
         display: grid;
         grid-template-rows: 250px 250px 250px;
         grid-gap: 2px;
         margin-top: 30px;
         margin-bottom: 30px;
-        width: 100%;
+        /*width: 100%;
         height: auto;
         padding-top: 40px;
-        background-color: #73b7bc;
+        background-color: var(--main-azul);*/
         justify-content: center;
         align-items: center;
     }
@@ -306,3 +349,4 @@ header {
         margin-right: auto;
     }
 }
+
