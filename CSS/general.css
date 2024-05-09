@@ -350,3 +350,42 @@ footer div{
     }
 }
 
+/*contactoCuidador*/
+
+    /*general*/
+    .formCuidador-bloque{
+        display: grid;
+        grid-template-rows: 20px 40px 10px;
+        grid-gap: 5px;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .formCuidador-bloque-etiqueta{
+        display: flex;
+    }
+
+    .formCuidador-bloque-input{
+        border-radius: 10px;
+        border: 0.5px solid;
+        border-color: gray;
+    }
+
+   .formCuidador-bloque-error{
+        font-size: 9px;
+        color: red;
+   }
+
+   .mascotaCheckbox{
+        width: 100%;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        margin: 10px;
+   }
+
+   .mascotaCheckboxTipoLabel{
+    width: 100px;
+    padding: 10px;
+   }
+    

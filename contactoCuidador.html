@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/general.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Crimson+Pro">
+    <script src="./js/validar.js" defer></script>
+    <title>PET</title>
+</head>
+<body>
+    <header>
+        <nav id="nav" class="flx">
+            <div>
+                <a href="#">
+                    <img src="/Assets/Img/logo/LogoPetWatchAr.png" class="logo" alt="imagen de logo">
+                </a>
+            </div>
+            <div>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle"/>
+            <label for="menu-toggle" class="menu-icon">
+                <div class="menu-icon-line"></div>
+                <div class="menu-icon-line"></div>
+                <div class="menu-icon-line"></div>
+                <div class="menu-icon-line"></div>
+            </label>
+            <!-- <ul class="nav-links :li-hover"> -->
+            <ul class="nav-list">
+                <li><a href="main.html#selectores">Se parte</a></li>
+                <li><a href="main.html#selectores">Cuidadores</a></li>
+                <li><a href="main.html#casos">Experiencias</a></li>
+                <li><a href="main.html#casos">Contactanos</a></li>
+            </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div id="formCuidador">
+            <form action="" class="formCuidador-general">
+                <div id="nombre" class="formCuidador-bloque">
+                    <div class="formCuidador-etiqueta">
+                        <label><span>Nombre </span><span>*</span></label>
+                    </div>
+                    <input type="text" class="formCuidador-bloque-input" id="inputTextoNombre" name="Nombre">
+                    <div id="mensajeErrorNombre" class="formCuidador-bloque-error"></div> 
+                </div>
+                <div id="apellido" class="formCuidador-bloque">
+                    <div class="formCuidador-etiqueta">
+                        <label><span>Apellido </span><span>*</span></label>
+                    </div>
+                    <input type="text" class="formCuidador-bloque-input" id="inputTextoApellido" name="Apellido">
+                    <div id="mensajeErrorApellido" class="formCuidador-bloque-error"></div> 
+                </div>  
+                <div id="mail" class="formCuidador-bloque">
+                    <div class="formCuidador-etiqueta">
+                        <label><span>Correo electrónico </span><span>*</span></label>
+                    </div>
+                    <input type="text" class="formCuidador-bloque-input" id="inputTextoMail">
+                    <div id="mensajeErrorMail" class="formCuidador-bloque-error"></div> 
+                </div>  
+                <div id="tel" class="formCuidador-bloque">
+                    <div class="formCuidador-etiqueta">
+                        <label><span>Telefono celular </span><span>*</span></label>
+                    </div>
+                    <input type="number" class="formCuidador-bloque-input" id="inputNumeroCelu">
+                    <div id="mensajeErrorCelu" class="formCuidador-bloque-error"></div> 
+                </div>  
+                <div id="fnacimiento" class="formCuidador-bloque">
+                    <div class="formCuidador-etiqueta">
+                        <label><span>Fecha de nacimiento </span><span>*</span></label>
+                    </div>
+                    <input type="date" class="formCuidador-bloque-input" id="inputFechaNacimiento">
+                    <div id="mensajeErrorNacimiento" class="formCuidador-bloque-error"></div> 
+                </div>
+                <div id="mascotas" class="formCuidador-bloque">
+                    <div class="formCuidador-etiqueta">
+                        <label><span>Mascota que deseo cuidar </span><span>*</span></label>
+                    </div>
+                    <div class="mascotaCheckbox">
+                        <input type="checkbox" id="perro" name="animal" value="perro" class="mascotaCheckboxTipo">
+                        <label for="perro" class="mascotaCheckboxTipoLabel">Perro</label>
+                        <select name="tamanioPerro">
+                            <option value="pequeño">Pequeño</option>
+                            <option value="mediano">Mediano</option>
+                            <option value="grande">Grande</option>
+                        </select>
+                    </div>
+                    <div class="mascotaCheckbox">
+                        <input type="checkbox" id="gato" name="animal" value="gato" class="mascotaCheckboxTipo">
+                        <label for="gato" class="mascotaCheckboxTipoLabel">Gato</label>
+                        <select name="tamanioGato">
+                            <option value="pequeno">Pequeño</option>
+                            <option value="mediano">Mediano</option>
+                            <option value="grande">Grande</option>
+                        </select>
+                    </div>
+                    <div class="mascotaCheckbox">
+                        <input type="checkbox" id="conejo" name="animal" value="conejo" class="mascotaCheckboxTipo">
+                        <label for="conejo" class="mascotaCheckboxTipoLabel">Conejo</label>
+                        <select name="tamanioConejo">
+                            <option value="pequeno">Pequeño</option>
+                            <option value="mediano">Mediano</option>
+                            <option value="grande">Grande</option>
+                        </select>
+                    </div>
+                </div>  
+            </form> 
+        </div>
+    </main>
+    <footer>
+        <div>
+            <p>Nos encontrás en</p>
+        </div>
+        <div>
+            <a href="#"><img src="Assets/Img/iconos/facebook.png" alt="" class="redes"></a>
+            <a href="#"><img src="Assets/Img/iconos/instagram.png" alt="" class="redes"></a>
+        </div>
+    </footer>
+</body>
+</html>
