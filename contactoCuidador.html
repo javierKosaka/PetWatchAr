@@ -12,8 +12,8 @@
 <body>
     <header>
         <nav id="nav" class="flx">
-            <div>
-                <a href="#">
+            <div class="logo-align">
+                <a href="/main.html">
                     <img src="/Assets/Img/logo/LogoPetWatchAr.png" class="logo" alt="imagen de logo">
                 </a>
             </div>
@@ -36,46 +36,50 @@
         </nav>
     </header>
     <main>
-        <div id="formCuidador">
-            <form action="" class="formCuidador-general">
-                <div id="nombre" class="formCuidador-bloque">
-                    <div class="formCuidador-etiqueta">
+        <div>
+            <h2>Para iniciar el proceso de admisión como cuidador, por favor completa el siguiente formulario y nos estaremos contactando para avanzar con las siguientes etapas</h1>
+        </div>
+        <div id="formGeneral">
+            <form action="" class="form">
+                <div id="nombre" class="form-bloque">
+                    <div class="form-etiqueta">
                         <label><span>Nombre </span><span>*</span></label>
                     </div>
-                    <input type="text" class="formCuidador-bloque-input" id="inputTextoNombre" name="Nombre">
-                    <div id="mensajeErrorNombre" class="formCuidador-bloque-error"></div> 
+                    <input type="text" class="form-bloque-input" id="inputTextoNombre" name="Nombre">
+                    <div id="mensajeErrorNombre" class="form-bloque-error"></div> 
                 </div>
-                <div id="apellido" class="formCuidador-bloque">
-                    <div class="formCuidador-etiqueta">
+                <div id="apellido" class="form-bloque">
+                    <div class="form-etiqueta">
                         <label><span>Apellido </span><span>*</span></label>
                     </div>
-                    <input type="text" class="formCuidador-bloque-input" id="inputTextoApellido" name="Apellido">
-                    <div id="mensajeErrorApellido" class="formCuidador-bloque-error"></div> 
+                    <input type="text" class="form-bloque-input" id="inputTextoApellido" name="Apellido">
+                    <div id="mensajeErrorApellido" class="form-bloque-error"></div> 
                 </div>  
-                <div id="mail" class="formCuidador-bloque">
-                    <div class="formCuidador-etiqueta">
+                <div id="mail" class="form-bloque">
+                    <div class="form-etiqueta">
                         <label><span>Correo electrónico </span><span>*</span></label>
                     </div>
-                    <input type="text" class="formCuidador-bloque-input" id="inputTextoMail">
-                    <div id="mensajeErrorMail" class="formCuidador-bloque-error"></div> 
+                    <input type="text" class="form-bloque-input" id="inputTextoMail">
+                    <div id="mensajeErrorMail" class="form-bloque-error"></div> 
                 </div>  
-                <div id="tel" class="formCuidador-bloque">
-                    <div class="formCuidador-etiqueta">
+                <div id="Cel" class="form-bloque">
+                    <div class="form-etiqueta">
                         <label><span>Telefono celular </span><span>*</span></label>
                     </div>
-                    <input type="number" class="formCuidador-bloque-input" id="inputNumeroCelu">
-                    <div id="mensajeErrorCelu" class="formCuidador-bloque-error"></div> 
+                    <input type="number" class="form-bloque-input" id="inputNumerCelu">
+                    <div id="mensajeErrorCelu" class="form-bloque-error"></div> 
                 </div>  
-                <div id="fnacimiento" class="formCuidador-bloque">
-                    <div class="formCuidador-etiqueta">
+                 
+                <div id="fnacimiento" class="form-bloque">
+                    <div class="form-etiqueta">
                         <label><span>Fecha de nacimiento </span><span>*</span></label>
                     </div>
-                    <input type="date" class="formCuidador-bloque-input" id="inputFechaNacimiento">
-                    <div id="mensajeErrorNacimiento" class="formCuidador-bloque-error"></div> 
+                    <input type="date" class="form-bloque-input mascotaWidth25" id="inputFechaNacimiento">
+                    <div id="mensajeErrorNacimiento" class="form-bloque-error"></div> 
                 </div>
-                <div id="mascotas" class="formCuidador-bloque">
-                    <div class="formCuidador-etiqueta">
-                        <label><span>Mascota que deseo cuidar </span><span>*</span></label>
+                <div id="mascotas">
+                    <div class="form-etiqueta">
+                        <label><span>Mascota que deseo cuidar </span></label>
                     </div>
                     <div class="mascotaCheckbox">
                         <input type="checkbox" id="perro" name="animal" value="perro" class="mascotaCheckboxTipo">
@@ -96,15 +100,19 @@
                         </select>
                     </div>
                     <div class="mascotaCheckbox">
-                        <input type="checkbox" id="conejo" name="animal" value="conejo" class="mascotaCheckboxTipo">
-                        <label for="conejo" class="mascotaCheckboxTipoLabel">Conejo</label>
-                        <select name="tamanioConejo">
-                            <option value="pequeno">Pequeño</option>
-                            <option value="mediano">Mediano</option>
-                            <option value="grande">Grande</option>
-                        </select>
+                        <input type="checkbox" id="otraMascota" name="animal" value="otraMascota" class="mascotaCheckboxTipo">
+                        <label for="otraMascota" class="mascotaCheckboxTipoLabel">Otra</label>
+                        <input type="text" id="otraMascotaText" class="mascotaText mascotaWidth50">
                     </div>
                 </div>  
+                <div id="comentarios" class="form-bloqueExtra">
+                    <div class="form-etiqueta">
+                        <label><span>Contanos un poco mas sobre tu experiencia</span><span>*</span></label>
+                    </div>
+                    <input type="text" class="form-bloque-input" id="inputTextoComentarios">
+                    <div id="mensajeErrorComentarios" class="form-bloque-error"></div> 
+                </div>
+                <button type="submit">Enviar</button>
             </form> 
         </div>
     </main>

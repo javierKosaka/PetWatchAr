@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/general.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Crimson+Pro">
+    <script src="./js/validar.js" defer></script>
+    <title>PET</title>
+</head>
+<body>
+    <header>
+        <nav id="nav" class="flx">
+            <div>
+                <a href="/main.html">
+                    <img src="/Assets/Img/logo/LogoPetWatchAr.png" class="logo" alt="imagen de logo">
+                </a>
+            </div>
+            <div>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle"/>
+            <label for="menu-toggle" class="menu-icon">
+                <div class="menu-icon-line"></div>
+                <div class="menu-icon-line"></div>
+                <div class="menu-icon-line"></div>
+                <div class="menu-icon-line"></div>
+            </label>
+            <!-- <ul class="nav-links :li-hover"> -->
+            <ul class="nav-list">
+                <li><a href="main.html#selectores">Se parte</a></li>
+                <li><a href="main.html#selectores">Cuidadores</a></li>
+                <li><a href="main.html#casos">Experiencias</a></li>
+                <li><a href="main.html#casos">Contactanos</a></li>
+            </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div>
+            <h2>Por favor, envianos tus consultas y en breve nos pondremos en contacto</h1>
+        </div>
+        <div id="formGeneral" >
+            <form action="" class="form">
+                <div id="nombre" class="form-bloque">
+                    <div class="form-etiqueta">
+                        <label><span>Nombre </span><span>*</span></label>
+                    </div>
+                    <input type="text" class="form-bloque-input" id="inputTextoNombre" name="Nombre">
+                    <div id="mensajeErrorNombre" class="form-bloque-error"></div> 
+                </div>
+                <div id="apellido" class="form-bloque">
+                    <div class="form-etiqueta">
+                        <label><span>Apellido </span><span>*</span></label>
+                    </div>
+                    <input type="text" class="form-bloque-input" id="inputTextoApellido" name="Apellido">
+                    <div id="mensajeErrorApellido" class="form-bloque-error"></div> 
+                </div>  
+                <div id="mail" class="form-bloque">
+                    <div class="form-etiqueta">
+                        <label><span>Correo electrónico </span><span>*</span></label>
+                    </div>
+                    <input type="text" class="form-bloque-input" id="inputTextoMail">
+                    <div id="mensajeErrorMail" class="form-bloque-error"></div> 
+                </div>            
+                <div id="comentarios" class="form-bloqueExtra">
+                    <div class="form-etiqueta">
+                        <label><span>Decinos como te podemos ayudar</span><span>*</span></label>
+                    </div>
+                    <input type="text" class="form-bloque-input" id="inputTextoComentarios">
+                    <div id="mensajeErrorComentarios" class="form-bloque-error"></div> 
+                </div>
+                <button type="submit">Enviar</button>
+            </form> 
+        </div>
+    </main>
+    <footer>
+        <div>
+            <p>Nos encontrás en</p>
+        </div>
+        <div>
+            <a href="#"><img src="Assets/Img/iconos/facebook.png" alt="" class="redes"></a>
+            <a href="#"><img src="Assets/Img/iconos/instagram.png" alt="" class="redes"></a>
+        </div>
+    </footer>
+</body>
+</html>

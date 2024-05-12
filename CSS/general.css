@@ -31,11 +31,33 @@ header {
     display:flex;
 }
 
+.logo-align{
+    align-self: center;
+}
+
+@keyframes smooth-appear {
+    to{
+      bottom: 20px;
+      opacity:1;
+    }
+  }
 .logo {
     height: 30px;
     width: auto;
     margin-right: 20px; 
-}
+    bottom: -100%;
+    opacity:0;
+    left: 50%;
+    align-items: center;
+    border-radius: 10px;
+    animation: smooth-appear 5s ease forwards;
+  }
+/*
+.logo {
+    height: 30px;
+    width: auto;
+    margin-right: 20px; 
+}*/
 .nav-list{
     list-style: none;
     margin: 0;
@@ -256,7 +278,174 @@ footer div{
 }
 
 
-/*Estilo para movil*/
+/*contacto*/
+
+    /*general*/
+    .form{
+        margin:20px;
+    }
+
+    .form-bloque{
+        display: grid;
+        grid-template-rows: 20px 40px 10px;
+        grid-gap: 5px;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .form-bloqueExtra{
+        display: grid;
+        grid-template-rows: 20px 100px 10px;
+        grid-gap: 5px;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .form-bloque-etiqueta{
+        display: flex;
+    }
+
+    .form-bloque-input{
+        border-radius: 10px;
+        border: 0.5px solid;
+        border-color: gray;
+    }
+
+   .form-bloque-error{
+        font-size: 9px;
+        color: red;
+   }
+
+   .mascotaCheckbox{
+        height: 40px;
+        display: flex;
+        align-items: center;
+        margin: 10px;
+   }
+
+   .mascotaWidth25{
+    width: 25%;
+   }
+
+   .mascotaWidth50{
+    width: 50%;
+   }
+
+   .mascotaCheckboxTipoLabel{
+    width: 100px;
+    padding: 10px;
+   }
+
+   /*BOTON 1*/
+
+   .wrapper{
+    /*position: relative;
+    top: 50%;
+    left: 90%;
+    transform: translate(-50%, -50%);
+    align-content: center;*/
+    margin: 20px;
+    display:flex;
+    justify-content: center;
+  }
+  
+    .wrapper a{
+    display: block;
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 12px;
+    text-decoration: none;
+    color: #333;
+    border: 2px solid #333;
+    letter-spacing: 2px;
+    text-align: center;
+    position: relative;
+    transition: all .35s;
+    }
+  
+    .wrapper a span{
+    position: relative;
+    z-index: 2;
+    }
+  
+    .wrapper a:after{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: green;
+    transition: all .35s;
+  }
+  
+    .wrapper a:hover{
+    color: #fff;
+        }
+  
+    .wrapper a:hover:after{
+    width: 100%;
+    }
+
+/*CUIDADORES*/
+
+/*principal*/
+.cuidadoresContainer{
+    display:grid;
+    grid-template-rows: 450px 450px;
+    grid-template-columns: 250px 250px 250px 250px 250px;
+    justify-content: center;
+}
+
+/*contenedores dinamicos en js*/
+.cuidadores-contenedor{
+    display: block;
+    height: 400px;
+    width: 200px;
+    margin: 20px;
+    background-color: lightgray;
+    border: 0.5px solid;
+    border-color: lightgray;
+    text-align: center;
+}
+
+.cuidadores-imagen{
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+
+}
+
+.button-cuidador {
+    background-color: var(--main-naranja); 
+    border: none;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    height: 40px;
+    width: 100px;
+    margin: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+  }
+
+.button-cuidador-hover:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  }
+
+.icon-size{
+    font-size: 24px;
+}
+
+/*ESTILOS MOBILE*/
+
+/*Estilo para tablet*/
 @media(max-width: 768px) {
     .nav-list {
         display:none;
@@ -348,44 +537,116 @@ footer div{
         margin-left: auto;
         margin-right: auto;
     }
+
+        /*CUIDADORES*/
+        /*principal*/
+        .cuidadoresContainer{
+            display:grid;
+            grid-template-columns: 250px 250px;
+            justify-content: center;
+        }
+
 }
 
-/*contactoCuidador*/
-
-    /*general*/
-    .formCuidador-bloque{
+/*estilo para moviles*/
+@media(max-width: 425px) {
+    .nav-list {
+        display:none;
+        width: 50%;
+        flex-direction: column;
+        position: absolute;
+        top: 40px;
+        right: 8px;
+        background: white;
+        margin-bottom: 50px;
+    }
+    .menu-toggle:checked + .menu-icon + .nav-list{
+        display:flex
+    }
+    .menu-icon {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 10px;
+    }
+    /*SELECTORES*/
+    .selector-container{
+        width: 100%;
+        height: auto;
+        overflow: hidden;  
         display: grid;
-        grid-template-rows: 20px 40px 10px;
-        grid-gap: 5px;
+        grid-template-rows: 300px 300px;
+        grid-gap: 2px;     
+        align-items: center; 
+        justify-content: center;
+    }
+    .selector{
+        object-fit: contain;
+        object-position:center;
+        position: relative;
+        overflow: hidden;
+        margin: 50px;
+        border: 1px solid;
+        border-color: grey;
+        border-radius: 20%;
+    }
+    .selector img{
+        height: 200px;
+        width: 200px;
+    }
+    .selector-mensaje{
+        height: 100px;
         width: 100%;
-        margin-bottom: 20px;
+        position: absolute;
+        object-fit: contain ;
+        background-color: rgba(235, 163, 8, 0.5); 
+        bottom: 0px;
+        margin: 0px;
+        align-content: center;
+        text-align: center;
+        font-size: 20px;
     }
+    /*CASOS*/
 
-    .formCuidador-bloque-etiqueta{
-        display: flex;
+    .casos{
+        margin-top: 60px;
+        margin-bottom: 60px;
+        padding: 10px;
+        background-color: var(--main-azul);
+        height: auto;
+        text-align: center;
     }
-
-    .formCuidador-bloque-input{
-        border-radius: 10px;
-        border: 0.5px solid;
-        border-color: gray;
-    }
-
-   .formCuidador-bloque-error{
-        font-size: 9px;
-        color: red;
-   }
-
-   .mascotaCheckbox{
-        width: 100%;
-        height: 30px;
-        display: flex;
+    .casos-container{
+        display: grid;
+        grid-template-rows: 250px 250px 250px;
+        grid-gap: 2px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        /*width: 100%;
+        height: auto;
+        padding-top: 40px;
+        background-color: var(--main-azul);*/
+        justify-content: center;
         align-items: center;
-        margin: 10px;
-   }
+    }
 
-   .mascotaCheckboxTipoLabel{
-    width: 100px;
-    padding: 10px;
-   }
-    
+    .foto-ajuste{
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+        border: 0.5px solid;
+        border-color: grey;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+        /*CUIDADORES*/
+        /*principal*/
+        .cuidadoresContainer{
+            display:grid;
+            grid-template-columns: 250px;
+            justify-content: center;
+        }
+
+}

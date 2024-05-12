@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/general.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Crimson+Pro">
+    <script src="https://kit.fontawesome.com/65b28121c7.js" crossorigin="anonymous"></script>
+    <script src="./js/mostrarCuidadores.js" defer></script>
+    <title>PET</title>
+</head>
+<body>
+    <header>
+        <nav id="nav" class="flx">
+            <div class="logo-align">
+                <a href="/main.html">
+                    <img src="/Assets/Img/logo/LogoPetWatchAr.png" class="logo" alt="imagen de logo">
+                </a>
+            </div>
+            <div>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle"/>
+            <label for="menu-toggle" class="menu-icon">
+                <div class="menu-icon-line"></div>
+                <div class="menu-icon-line"></div>
+                <div class="menu-icon-line"></div>
+                <div class="menu-icon-line"></div>
+            </label>
+            <!-- <ul class="nav-links :li-hover"> -->
+            <ul class="nav-list">
+                <li><a href="main.html#selectores">Se parte</a></li>
+                <li><a href="main.html#selectores">Cuidadores</a></li>
+                <li><a href="main.html#casos">Experiencias</a></li>
+                <li><a href="main.html#casos">Contactanos</a></li>
+            </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div>
+            <h2>Algunos de nuestros cuidadores más destacados</h1>
+        </div>
+        <div id="cuidadoresContainer" class="cuidadoresContainer">
+           <!--ACA VA LA INSERCION DINAMICA EN JAVASCRIPT-->
+        </div>
+    </main>
+    <footer>
+        <div>
+            <p>Nos encontrás en</p>
+        </div>
+        <div>
+            <a href="#"><img src="Assets/Img/iconos/facebook.png" alt="" class="redes"></a>
+            <a href="#"><img src="Assets/Img/iconos/instagram.png" alt="" class="redes"></a>
+        </div>
+    </footer>
+</body>
+</html>

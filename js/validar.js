@@ -1,57 +1,38 @@
-// VALIDACIONES PARA CAMPOS DE TEXTO
 
-document.addEventListener('DOMContentLoaded', 
-function() {
-        var input = document.getElementById('inputTextoNombre');
-        var mensajeError = document.getElementById('mensajeErrorNombre');
+// VALIDAR CAMPOS OBLIGATORIOS VACIOS 
+document.addEventListener("DOMContentLoaded", function() {
+    const form = document.querySelector('#formGeneral');
 
-        input.addEventListener('input', 
-        function() {
-            var valor = input.value;
-            // Validar que no este vacío, tenga menos de dos caracteres o más de 50
-            if (valor.length >= 50){
-                mensajeError.textContent = "El valor es demasiado largo";
-            } else if (valor.length < 2){
-                mensajeError.textContent = "El valor es demasiado corto";
-            } else  { mensajeError.textContent="";}
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        let isValid = true;
+        //Array de campos obligatorios
+        const inputIds = ['inputTextoNombre', 'inputTextoApellido', 'inputTextoMail', 'inputNumerCelu', 'inputFechaNacimiento', 'inputTextoComentarios'];
+
+        inputIds.forEach(id => {
+            const inputElement = document.getElementById(id);
+            const errorElementId = `mensajeError${id.slice(10)}`;
+            console.log(errorElementId);  
+            const errorElement = document.getElementById(errorElementId);
+
+            if (!inputElement.value.trim()) {
+                if (errorElement) {
+                    errorElement.textContent = 'Debe completar este campo';
+                } else {
+                    console.error("No se encontró el elemento de error para", id);
+                }
+                isValid = false;
+            } else {
+                if (errorElement) {
+                    // Limpiar mensaje de error
+                    errorElement.textContent = ''; 
+                }
+            }
         });
-    }
-    );
 
-
-document.addEventListener('DOMContentLoaded', 
-    function() {
-            var input = document.getElementById('inputTextoApellido');
-            var mensajeError = document.getElementById('mensajeErrorApellido');
-    
-            input.addEventListener('input', 
-            function() {
-                var valor = input.value;
-                // Validar que no este vacío, tenga menos de dos caracteres o más de 50
-                if (valor.length >= 50){
-                    mensajeError.textContent = "El valor es demasiado largo";
-                } else if (valor.length < 2){
-                    mensajeError.textContent = "El valor es demasiado corto";
-                } else  { mensajeError.textContent="";}
-            });
+        if (isValid) {
+            alert("El mensaje ha sido enviado correctamente. En breve será contactado por uno de nuestros representantes");
+            form.submit(); 
         }
-        );
-
-// VALIDACIONES PARA CAMPOS DE E-MAIL
-
-document.addEventListener('DOMContentLoaded', 
-function() {
-    var input = document.getElementById('inputTextoMail');
-    var mensajeError = document.getElementById('mensajeErrorMail');
-
-    input.addEventListener('input', 
-    function() {
-        var valor = input.value;
-        var patronEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        // Validar que coincida con patronEmail
-        if (!patronEmail.test(valor)){
-            mensajeError.textContent = "Introduzca una dirección de correo electrónico válida";
-        } else  { mensajeError.textContent="";}
     });
-}
-);
+});
