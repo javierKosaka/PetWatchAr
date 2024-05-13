@@ -74,9 +74,11 @@ header {
 .menu-icon{
     display:none;
     cursor:pointer;
+    margin: 15px;
 }
 
 .menu-icon-line{
+    display: block;
     width: 30px;
     height: 3px;
     background-color: black;
