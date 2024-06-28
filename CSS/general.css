@@ -13,6 +13,7 @@
     --main-naranja: RGB(255, 165, 0);
     --main-naranja-t: RGBA(255, 165, 0, 0.5);
     --main-marron: RGB(210, 180, 140);
+    --main-experiencias: RGBA(240, 173, 67, 0.25);
 }
 
 
@@ -156,7 +157,7 @@ header {
     margin-top: 60px;
     margin-bottom: 60px;
     padding: 10px;
-    background-color: var(--main-azul);
+    background-color: var(--main-experiencias);
     height: 450px;
     text-align: center;
 }
@@ -252,7 +253,7 @@ footer div{
         display: grid;
         grid-template-rows: 20px 40px 10px;
         grid-gap: 5px;
-        width: 100%;
+        width: 50%;
         margin-bottom: 20px;
     }
 
@@ -260,7 +261,7 @@ footer div{
         display: grid;
         grid-template-rows: 20px 100px 10px;
         grid-gap: 5px;
-        width: 100%;
+        width: 50%;
         margin-bottom: 20px;
     }
 
@@ -405,6 +406,9 @@ footer div{
 
 /*Estilo para tablet*/
 @media(max-width: 768px) {
+    .body{
+        font-size: 20px;
+    }
     .nav-list {
         display:none;
         width: 50%;
@@ -430,7 +434,7 @@ footer div{
         height: auto;
         overflow: hidden;  
         display: grid;
-        grid-template-rows: 300px 300px;
+        grid-template-rows: 400px 400px;
         grid-gap: 2px;     
         align-items: center; 
         justify-content: center;
@@ -446,11 +450,11 @@ footer div{
         border-radius: 20%;
     }
     .selector img{
-        height: 200px;
-        width: 200px;
+        height: 300px;
+        width: 300px;
     }
     .selector-mensaje{
-        height: 100px;
+        height: 150px;
         width: 100%;
         position: absolute;
         object-fit: contain ;
@@ -467,7 +471,7 @@ footer div{
         margin-top: 60px;
         margin-bottom: 60px;
         padding: 10px;
-        background-color: var(--main-azul);
+        background-color: var(--main-experiencias);
         height: auto;
         text-align: center;
     }
@@ -566,7 +570,7 @@ footer div{
         margin-top: 60px;
         margin-bottom: 60px;
         padding: 10px;
-        background-color: var(--main-azul);
+        background-color: var(--main-experiencias);
         height: auto;
         text-align: center;
     }
@@ -589,6 +593,23 @@ footer div{
         display: block;
         margin-left: auto;
         margin-right: auto;
+    }
+
+    /*CONTACTO*/
+    .form-bloque{
+        display: grid;
+        grid-template-rows: 20px 40px 10px;
+        grid-gap: 5px;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .form-bloqueExtra{
+        display: grid;
+        grid-template-rows: 20px 100px 10px;
+        grid-gap: 5px;
+        width: 100%;
+        margin-bottom: 20px;
     }
 
         /*CUIDADORES*/
