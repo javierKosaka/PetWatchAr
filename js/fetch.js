@@ -1,6 +1,6 @@
-
+/* conectar con API que muestra a los cuidadores*/
         document.addEventListener('DOMContentLoaded', function() {
-            fetch('http://localhost:4000/api/cuidadores')
+            fetch('https://jakosaka.pythonanywhere.com/api/cuidadores')
                 .then(response => response.json())
                 .then(data => {
                     const cuidadoresBody = document.querySelector('#cuidadoresBody');
@@ -20,11 +20,13 @@
                     });
                 });
 
+
+/* conectar con API que agrega un cuidador*/
             document.querySelector('#addCuidadorForm').addEventListener('submit', function(event) {
                 event.preventDefault();
                 const formData = new FormData(event.target);
                 const data = Object.fromEntries(formData.entries());
-                fetch('http://localhost:4000/api/cuidador', {
+                fetch('https://jakosaka.pythonanywhere.com/api/cuidador', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
@@ -38,11 +40,12 @@
                 });
             });
 
+/*conectar con API que modifica un cuidador*/
             document.querySelector('#saveChangesButton').addEventListener('click', function() {
                 const formData = new FormData(document.querySelector('#editCuidadorForm'));
                 const data = Object.fromEntries(formData.entries());
                 const IDCUIDADOR = document.querySelector('#editCuidadorForm').dataset.idcuidador;
-                fetch(`http://localhost:4000/api/cuidador/${IDCUIDADOR}`, {
+                fetch(`https://jakosaka.pythonanywhere.com/api/cuidador/${IDCUIDADOR}`, {
                     method: 'PUT',
                     headers: {
                         'Content-Type': 'application/json'
@@ -57,6 +60,7 @@
             });
         });
 
+        /*modal que modifica los datos del cuidador*/
         function showEditModal(IDCUIDADOR, NOMBRE, APELLIDO, CALIFICACION, REVIEWS, MASCOTA) {
             const form = document.querySelector('#editCuidadorForm');
             form.dataset.idcuidador = IDCUIDADOR;
@@ -69,9 +73,10 @@
             modal.show();
         }
 
+/*conectar con API que borra un cuidador*/
         function deleteCuidador(IDCUIDADOR) {
             if (confirm('¿Estás seguro de que quieres eliminar este cuidador?')) {
-                fetch(`http://localhost:4000/api/cuidador/${IDCUIDADOR}`, {
+                fetch(`https://jakosaka.pythonanywhere.com/api/cuidador/${IDCUIDADOR}`, {
                     method: 'DELETE'
                 })
                 .then(response => response.json())
